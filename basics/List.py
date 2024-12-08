@@ -17,6 +17,15 @@ bytearray = x = bytearray(5)
 bytes = x = b"Hello"
 memoryview = x = memoryview(b"Hello")
 
+*****IMPORTANT******
+================
+Casting Tuples and Lists
+================
+
+1.Convert List to Tuple
+Syntax: tuple(list)
+2.Convert Tuple to List
+Syntax: list(Tuple)
 """
 # List
 
@@ -196,6 +205,79 @@ Syntax and Example:
 list.clear()
 '''
 
+# Copying a list using copy()
+'''
+============
+Copying a List
+============
+copy() copies the whole list which can be assign to a new List
+
+Syntax and Example:
+listOne = ["One","Two","Three"]
+listTwo = listOne.copy()
+
+'''
+
+# Combining a list
+'''
+============
+Combining a Lists BY ADDING
+============
+use '+' operator to combine a list
+
+Syntax and Example:
+listOne = ["One","Two","Three"]
+listTwo = ["Four","Five"]
+listThree = listOne + listTwo
+'''
+
+# Combining a list using extend()
+'''
+============
+Combining a Lists BY EXTEND()
+============
+extend() combines lists by appending the specified list to the end of the first list
+
+Syntax and Example:
+listOne = ["One","Two","Three"]
+listTwo = ["Four","Five"]
+listOne.extend(listTwo)
+'''
+
+# Reversing a list using reverse()
+'''
+============
+REVERSE List Item
+============
+reverse() Reverses the order of the List's Items.
+
+Syntax and Example:
+list.reverse()
+'''
+
+# Sorting List Item using sort()
+'''
+============
+SORT List Item
+============
+sort() Sort's List's Item by Alphabet or Value depending on Data Type
+
+Syntax and Example:
+list.sort() Ascending Order
+list.sort(reverse = True) Descending Order
+'''
+
+# Nested List
+'''
+============
+Nested List Item
+============
+A List inside a List also known as Sublist
+
+Syntax and Example:
+list = [1,2,3,["one","two"]]
+'''
+
 # How to use List
 
 courses = ["BSIT", "BSCS", "BSIS", "BSECE"]
@@ -265,9 +347,59 @@ print("Removing Items on the List using del")
 del courses[0]
 print(courses)
 
-#  Function
+# clear() Function
 
 print("===============")
 print("Removing Items on the List using clear()")
 courses.clear()
 print(courses)
+
+# copy() Function
+print("===============")
+print("Copying a List using copy()")
+listOne = ["One", "Two", "Three"]
+listTwo = listOne.copy()
+print("List one:", listOne)
+print("List two:", listTwo)
+
+# Combining lists
+print("===============")
+print("Combining two list")
+listOne = ["One", "Two", "Three"]
+listTwo = ["Four", "Five"]
+listThree = listOne + listTwo
+print("List one:", listOne)
+print("List two:", listTwo)
+print("List Three:", listThree)
+
+# Combining lists using extends()
+print("===============")
+print("Combining two list")
+listOne = ["One", "Two", "Three"]
+listTwo = ["Four", "Five"]
+print("List one:", listOne)
+print("List two:", listTwo)
+listOne.extend(listTwo)
+print("Combined", listOne)
+
+# Reversing lists using reverse()
+print("===============")
+print("Reversing A list")
+listOne.reverse()
+print(listOne)
+
+# Sorting lists using using()
+print("===============")
+print("Sorting A list")
+listOne.sort()
+print("Not Reverse :", listOne)
+listOne.sort(reverse=True)
+print("Reversed :", listOne)
+
+# Nested list
+print("===============")
+print("Nested list")
+randomList = [1, 2, 3, [["one", "two"], "three"]]
+print(randomList[3])         # [["one","two"],"three"]
+print(randomList[3][1])      # "three"
+print(randomList[3][0][1])   # "two"

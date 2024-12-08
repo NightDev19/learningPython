@@ -3,7 +3,7 @@
 If you want to clone it just clone it 
 
 ```git
- git clone <link>.git
+ git clone https://github.com/NightDev19/learningPython.git
 ```
 then go to the file and test it 
 

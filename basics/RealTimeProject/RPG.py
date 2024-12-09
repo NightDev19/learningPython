@@ -63,7 +63,7 @@ while True:
             and the choice input is 1 since the num is 1 but the index is zero so we less it in 1 to take the index into 0 so we can choose the "sword"
         '''
         chosenItem = list(shop.keys())[int(choice) - 1] 
-        print(chosenItem)
+        print(f"You chose the {chosenItem} to buy.") # Sample
         #Check Money affordability
         if money >= shop[chosenItem]["price"]:
             money -= shop[chosenItem]["price"]

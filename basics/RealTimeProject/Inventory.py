@@ -14,6 +14,8 @@
 
 # Variables
 inventory = {
+    #      Key  :          Value
+    #          key :   value   key :  value
     "sword": {"quantity": 10, "price": 100},
     "shield": {"quantity": 10, "price": 150},
     "wand": {"quantity": 10, "price": 100},
@@ -39,8 +41,8 @@ def clear():
 
 def displayShop():
     print('[===Shop===]')
-    for i, (items, details) in enumerate(shop.items(), start=1):
-        print(f"{i}.){items} : ${details["price"]}\n -{details['desc']}")
+    for i, (key, value) in enumerate(shop.items(), start=1):
+        print(f"{i}.){key} : ${value["price"]}\n -{value['desc']}")
 
 
 def buyItems(itemName, quantity):
@@ -83,40 +85,56 @@ def displayTransactionHistory():
 
 
 while True:
+    clear()
     print("[===Welcome to Shop===]")
     print("\n[===OPTIONS===]\n1. View Shop\n2. Buy Item\n3. Sell Item\n4. View Inventory\n5. View Transaction\n6. Check Balance\n7. Quit")
     choice = int(input("Choose an Option: "))
     if choice == 1:
         clear()
         displayShop()
+        input()
     elif choice == 2:
         clear()
         YN = input("Do You want to buy ?(y/n) :")
         if YN.lower() == 'y':
             displayShop()
-            itemName = input("Enter the item you want to buy: ").lower()
-            quantity = int(input("Enter the quantity: "))
-            buyItems(itemName, quantity)
+            while True:
+                itemName = input("Enter the item you want to buy: ").lower()
+                quantity = input("Enter the quantity: ")
+                if itemName and quantity != "":
+                    buyItems(itemName, int(quantity))
+                    break
+                else:
+                    print("Put the item name or how many item will you sell!")
     elif choice == 3:
         clear()
         YN = input("Do You want to sell ?(y/n) :")
         if YN.lower() == 'y':
-            displayShop()
-            itemName = input("Enter the item you want to sell: ").lower()
-            quantity = int(input("Enter the quantity: "))
-            sellItems(itemName, quantity)
+            displayInventory()
+            while True:
+                itemName = input("Enter the item you want to sell: ").lower()
+                quantity = input("Enter the quantity: ")
+                if itemName != "" and quantity != "":
+                    sellItems(itemName, int(quantity))
+                    break
+                else:
+                    print("Put the item name or how many item will you sell!")
     elif choice == 4:
         clear()
         displayInventory()
+        input()
     elif choice == 5:
         clear()
         displayTransactionHistory()
+        input()
     elif choice == 6:
         clear()
         print(f"Balance : {balance}")
+        input()
     elif choice == 7:
         clear()
         print("Goodbye!")
         break
     else:
         print("Invalid Option. Please try again.")
+        input()

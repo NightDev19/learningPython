@@ -7,10 +7,6 @@ If you want to clone it just clone it
 ```
 then go to the file and test it 
 
-creator: Me ,My Self and I
+Here is the Documentation ➡️ <u>[Documentation](https://www.notion.so/My-Documentation-9f702b1804fa44eeb867b136c9581d3b?pvs=4)</u>
 
-TODO:
-
-Add Real Time Project
-
-*
+Creator: Me ,My Self and I

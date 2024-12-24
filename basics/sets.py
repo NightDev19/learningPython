@@ -1,102 +1,3 @@
-# Flow
-'''
-Flow:
-
-1. Understading Sets
-2. Manipulating Sets
-'''
-
-# Topic
-'''
-============
-Sets
-============
-A Collection of Variables that is Partially Writable and it's Unordered and Unindexed
-
-Syntax:
-identifier = {value,value1,value2}
-Example:
-evenNumbers ={2,4,6,8,10} 
-
-
-- You can read a sets by printing the whole set
-- You can read a sets using a loop
-
-* TODO: Reading Set ITEMS
-    - It is not possible to read certain item in a set unless you cast it into a List or Tuple
-    
-    - hence Sets are unindexed or unordered
-    
-    Syntax :
-        list(set)
-        tuple(set)
-
-* TODO: Assigning Set Items
-    - It is not possible to change the value of a certain item in a set unless you cast it into a List or Tuple
-    
-    - hence Sets are unindexed or unordered
-    
-    Syntax :
-        list(set)
-        tuple(set)
-
-'''
-
-# Length of a Set
-'''
-===============
-Set Length
-===============
-You can check the number of items in a set by using the len() function
-
-Syntax:
-print(len(set))
-Example:
-print(len(evenNumbers))
-
-'''
-
-# Adding Items to a Set
-'''
-===============
-Set ADD ITEMS by add()
-===============
-add() adds an item at the END OF THE SET.
-
-Syntax:
-set.add(value)
-Example:
-evenNumbers.add(12)
-'''
-
-# Adding Items to a Set using update()
-'''
-===============
-Set ADD ITEMS by update()
-===============
-update() allows multiple items to be added at the same time in the sets
-
-Syntax:
-set.update(value,value1,value2)
-Example:
-evenNumbers.update([12,14,16,18,20])
-'''
-
-# Deleting Items from a Set using remove()
-'''
-===============
-Set DELETE ITEMS by remove()
-===============
-remove() deletes an item based on their value
-
-Syntax:
-set.remove(value)
-Example:
-evenNumbers.remove(20)
-
-PS : if the value does not exist, it will throw an error
-
-'''
 
 # How to use a Sets
 evenNumbers ={2,4,6,8,10} 
@@ -129,15 +30,64 @@ print(lenSet)
 # Adding Items to a Set using add()
 print("\nAdding Items to a Set using add()")
 evenNumbers.add(12)
-print(evenNumbers)
+print(evenNumbers,"12 is added")
 
 # Adding Items to a Set using update()
 print("\nAdding Items to a Set using update()")
 extension = [12,14,16,18,20]
 evenNumbers.update(extension)
-print(evenNumbers)
+print(evenNumbers,"adding an Extension")
 
 # Deleting Items from a Set using remove()
 print("\nDeleting Items from a Set using remove()")
 evenNumbers.remove(20)
-print(evenNumbers)
+print(evenNumbers,"20 is removed")
+
+# Deleting Items from a Set using discard()
+print("\nDeleting Items from a Set using discard()")
+evenNumbers.discard(18)
+print(evenNumbers,"18 is removed")
+
+# Delete item from a Set using pop()
+print("\nDelete item from a Set using pop()")
+evenNumbers.pop()
+print(evenNumbers,"2 is removed")
+
+# Clearing a Set using clear()
+print("\nClearing a Set using clear()")
+evenNumbers.clear()
+print(evenNumbers,"Set is cleared")
+
+# Copying a Set using copy()
+print("\nCopying a Set using copy()")
+setOne = {1,2,3,4,5,6,7,8,9,10}
+setTwo = setOne.copy()
+print(setOne)
+print(setTwo)
+
+# Combining Sets
+print("\nCombining Sets")
+setOne = {1,2,3,4,5,6,7,8,9,10}
+setTwo = {11,12,13,14,15,16,17,18,19,20}
+setThree = setOne.union(setTwo)
+print("Set One: ",setOne)
+print("Set Two: ",setTwo)
+print("Union: ",setThree)
+
+# Difference between Sets
+print("\nDifference between Sets")
+setOne = {1,2,3,4,5,6,7,8,9,10}
+setTwo = {1,11,12,13,14,15,16,17,18,19,20}
+setThree = setOne.difference(setTwo)
+print("Set One: ",setOne)
+print("Set Two: ",setTwo)
+print("Difference: ",setThree)
+
+# intersection between Sets
+print("\nIntersection between Sets")
+setOne = {1,2,3,4,5,6,7,8,9,10}
+setTwo = {1,11,12,13,14,15,16,17,18,19,20}
+setThree = setOne.intersection(setTwo)
+print("Set One: ",setOne)
+print("Set Two: ",setTwo)
+print("Intersection: ",setThree)

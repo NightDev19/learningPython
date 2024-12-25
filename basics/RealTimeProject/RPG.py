@@ -50,6 +50,7 @@ while True:
         # Chosen Item Explaination
         '''
          * chosenItem
+         ``
             - Casting it into a list and took the Keys only to create ["Sword","Shield","Potion"]
             - using that it can automatically select the index but the index is starting to zero but the numbering is start at one 
             - so we make the choice into a number and less it to 1
@@ -60,7 +61,8 @@ while True:
             shop ["Sword","Shield","Potion"]
             num      1        2        3
             
-            and the choice input is 1 since the num is 1 but the index is zero so we less it in 1 to take the index into 0 so we can choose the "sword"
+            and the choice input is 1 since the num is 1 but the index is zero so 
+            we less it in 1 to take the index into 0 so we can choose the "sword"
         '''
         chosenItem = list(shop.keys())[int(choice) - 1] 
         print(f"You chose the {chosenItem} to buy.") # Sample

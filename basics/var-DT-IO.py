@@ -4,7 +4,7 @@
 Declaration of a Variable
 =========================
 """
-name 
+
 firstName = "Sherwin"
 lastName = "Tajan"
 age = "22"

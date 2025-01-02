@@ -7,10 +7,10 @@ def main():
         print("\n--- Student Management System ---")
         print("1. View Student\n2. Add Student\n3. Update Student\n4. Delete Student\n5. List All Students\n6. Exit")
         choice = input("Enter your choice: ")
-        
+
         if choice == "1":
             id = input("Enter student ID: ")
-            print(get_student_data(int(id)))
+            print(get_student(int(id)))
         elif choice == "2":
             id = int(input("Enter student ID: "))
             name = input("Enter student name: ")
@@ -27,7 +27,7 @@ def main():
             id = int(input("Enter student ID: "))
             print(delete_student(id))
         elif choice == "5":
-            get_all_students()
+            list_student()
         elif choice == "6":
             break
         else:

@@ -7,7 +7,6 @@ students = {
     3: {"Name": "Jenny", "Age": 22, "Course": "BSIT"},
 }
 
-
 def get_student(student_id):
     return students.get(student_id, "Student not found.")
 

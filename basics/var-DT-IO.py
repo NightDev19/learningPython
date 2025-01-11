@@ -1,7 +1,7 @@
 # Sample of Variable
 """
 =========================
-Declaration of a Variable
+Initialization of a Variable
 =========================
 """
 
@@ -52,7 +52,7 @@ num2 = int(input("Enter the second number : "))
 print(num1 + num2)
 
 
-# Artithmetic Operators
+# Arithmetic Operators
 
 # Addition
 print(5 + 5)

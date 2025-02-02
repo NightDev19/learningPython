@@ -24,9 +24,9 @@ chances = 3
 
 
 while chances > 0:
+    print(f"Chances left: {chances}")
     user = input("Enter your username: ")
     passw = input("Enter your password: ")
-    print(f"Chances left: {chances}")
     for i in range(len(username)):
         if username[i] == user and password[i] == passw:
             print(f"Welcome {username[i]}")
@@ -34,3 +34,4 @@ while chances > 0:
         else:
             print("Account not found")
             chances -= 1
+            break

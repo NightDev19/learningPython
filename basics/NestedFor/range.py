@@ -1,8 +1,8 @@
 for x in range(5):
-    for y in range(x+1):
+    for y in range(x):
         print("*", end=" ")
     print()
-    
+
 # Code to print a heart shape using asterisks (*)
 for row in range(6):
     for col in range(7):
@@ -11,4 +11,3 @@ for row in range(6):
         else:
             print(" ", end=" ")
     print()
-

@@ -14,7 +14,7 @@ def fetch_pokemon(name, callback):
 # Lambda function as a callback to process and print the data
 process_pokemon = lambda data: (
     print(f"Name: {data['name']}\nAbilities:"),
-    print(data['abilities']['ability']['name']) ,
+    [print(ability['ability']['name']) for ability in data['abilities']],
     
 )
 

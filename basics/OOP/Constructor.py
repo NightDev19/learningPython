@@ -6,7 +6,7 @@ class Character:
         self.mp = mp
         self.attack = attack
         self.lv = lv
-        print(f"{name}!, Your Character Created")
+        print(f"{self.name}!, Your Character Created")
         
 char1 = Character("Night",100,50,12,1)
 print(vars(char1))

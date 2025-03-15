@@ -47,7 +47,7 @@ while True:
         print("Good bye!")
         break
     elif choice.isdigit() and 1 <= int(choice) <= len(shop): 
-        # Chosen Item Explaination
+        # Chosen Item Explanation
         '''
          * chosenItem
          ``
@@ -71,7 +71,7 @@ while True:
             money -= shop[chosenItem]["price"]
             print(f"You've bought {chosenItem}. Balance: ${money}")
         else:
-            print("Insuffucient Balance")
+            print("Insufficient Balance")
     else:
         print("Invalid Choice: Please Try Again!")
     

@@ -17,3 +17,4 @@ character1.name = "Night"
 character2.name = "Day"
 print(character1.name)
 print(character2.name)
+print(vars(character1))
